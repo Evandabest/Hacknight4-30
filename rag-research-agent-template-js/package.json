@@ -8,13 +8,17 @@
   "private": true,
   "type": "module",
   "packageManager": "yarn@1.22.22",
-  "scripts": {
+"scripts": {
+    "dev": "next dev",
     "build": "tsc",
     "clean": "rm -rf dist",
+    "start": "next start",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testPathPattern=\\.test\\.ts$ --testPathIgnorePatterns=\\.int\\.test\\.ts$",
     "test:int": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testPathPattern=\\.int\\.test\\.ts$",
     "lint": "eslint src",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "collect-data": "tsx scripts/collect-data.ts",
+    "test-env": "tsx scripts/test-env.ts"
   },
   "dependencies": {
     "@elastic/elasticsearch": "^8.15.0",
